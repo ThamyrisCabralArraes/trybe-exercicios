@@ -1,0 +1,54 @@
+header {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.barra-lateral {
+  float: left;
+}
+
+aside {
+  float: right;
+  border: 1px black solid;
+  box-shadow: rgba(0, 0, 0, 0.527);
+  margin: 2px;
+  padding: 10px;
+}
+
+article {
+  width: 70%;
+  margin: auto;
+}
+
+section {
+  width: 70%;
+  margin: auto;
+}
+
+.referencias {
+  width: 70%;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.line {
+  border-bottom: 1px black solid;
+  width: 900px;
+  padding: 5px;
+}
