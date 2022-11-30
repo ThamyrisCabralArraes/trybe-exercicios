@@ -9,21 +9,27 @@ let info2 = {
   nota: 'O último MacPatinhas',
 };
 
-// console.log(`Boas-vindas, ${info.personagem}`);
+console.log(`Boas-vindas, ${info.personagem}`);
 
 info.recorrente = 'Sim';
 info2.recorrente = 'Sim';
-// console.log(info);
+console.log(info);
 
-// for (let index in info) {
-//   console.log(index);
-// }
+for (let index in info) {
+  console.log(index);
+}
 
-// for (let index in info) {
-//   console.l;
-// }
+for (let index in info) {
+  console.l;
+}
+for (let index in info) {
+  if (index === 'recorrente' && info[index] === 'Sim' && info2[index] === 'Sim') {
+    console.log('Ambos são recorrentes');
+  } else {
+    console.log(`${info.recorrente} e ${info2.recorrente}`);
+  }
+}
 
 console.log(`${info.personagem} e ${info2.personagem}`);
 console.log(`${info.origem} e ${info2.origem}`);
 console.log(`${info.nota} e ${info2.nota}`);
-console.log(`${info.recorrente} e ${info2.recorrente}`);
