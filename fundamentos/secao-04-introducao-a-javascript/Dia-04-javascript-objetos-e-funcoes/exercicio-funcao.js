@@ -39,8 +39,8 @@ let arrNomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 let maiorNome = arrNomes[0];
 
 function arrNome() {
-  for (let index = 0; index < arrNomes.length; index = +1) {
-    if (maiorNome < arrNomes[index].length) {
+  for (let index = 0; index < arrNomes.length; index += 1) {
+    if (maiorNome.length < arrNomes[index].length) {
       maiorNome = arrNomes[index];
     }
   }
