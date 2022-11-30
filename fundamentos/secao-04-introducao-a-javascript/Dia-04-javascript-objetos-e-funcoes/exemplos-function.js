@@ -57,6 +57,7 @@ function bigNumber(firstNumber, secondNumber, third) {
     return `${third} é maior que ${firstNumber} e ${secondNumber}`;
   }
 }
+
 console.log(bigNumber(14, 15, 6));
 
 function positiveNegative(number) {
@@ -81,3 +82,8 @@ function triangulo(n1, n2, n3) {
   }
 }
 console.log(triangulo(60, 60, 60));
+
+function sum(a, b) {
+  return a + b;
+}
+console.log(sum(1, 2));
