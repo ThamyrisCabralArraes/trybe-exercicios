@@ -26,6 +26,7 @@ const biggestWord = (frase) => {
       menor = result[index];
     }
   }
+  return menor;
 };
 biggestWord(`Hello, Bem vindo, obrigada por estar aqui`);
 console.log(menor);
@@ -50,3 +51,38 @@ const longestWord = (text) => {
 console.log(longestWord('Antonio foi ao banheiro e não sabemos o que aconteceu'));
 
 //
+
+const substituaX = (name) => {
+  let frase = `Tryber x aqui!`;
+  let fraseSplit = frase.split(' ');
+  for (let word in fraseSplit) {
+    if (fraseSplit[word] === 'x') {
+      fraseSplit[word] = name;
+    }
+  }
+  return fraseSplit.join(' ');
+};
+console.log(substituaX('Thamyris'));
+
+const minhasSkill = (funcao) => {
+  const skills = ['JavaScript', 'HTML', 'CSS'];
+  return `${funcao}
+    Minhas três principais habilidades são:
+    ${skills}`;
+};
+console.log(minhasSkill(substituaX('Thamyris')));
+
+//Trybe fez:
+
+const minhasSkills = (func) => {
+  const skills = ['JavaScript', 'HTML', 'CSS'];
+  let resultado = `
+  ${func}
+
+  Minhas três principais habilidades são:`;
+  for (let index = 0; index < skills.length; index += 1) {
+    resultado = `${resultado} - ${skills[index]}`;
+  }
+  return resultado;
+};
+console.log(minhasSkills(substituaX('Bebeto')));
