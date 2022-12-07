@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById('paragraph');
+      paragraph.style.color = 'red';
+
+      const h1 = (document.getElementById('page-title').innerHTML = 'Ô loco meu!');
+      const segundoParagrafo = (document.getElementById('second-paragraph').textContent =
+        'Como diria Tiradentes: Complicaded!');
+      const h4 = (document.getElementById('subtitle').innerText =
+        'Se a vida te der limões, coloque no peixe.');
+    </script>
+  </body>
+</html>
