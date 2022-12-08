@@ -76,7 +76,7 @@
       // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       let createP = document.createElement('p');
       section1.appendChild(createP);
-      createP.innerText = 'Thamyris';
+      createP.innerText = 'Ô loco meu';
       // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
       let section2 = document.createElement('section');
       section2.className = 'left-content';
@@ -91,7 +91,7 @@
       img.src = 'https://picsum.photos/200';
       section2.appendChild(img);
       // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-      const listNoOrdenada = document.createElement('ol');
+      const listNoOrdenada = document.createElement('ul');
       section3.appendChild(listNoOrdenada);
 
       let arrayListNumbers = [
@@ -116,6 +116,7 @@
       // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
       for (let index = 0; index < 3; index += 1) {
         let creatH3 = document.createElement('h3');
+        //creatH3.innerHTML = 'Meus h3';
         main.appendChild(creatH3);
       }
 
