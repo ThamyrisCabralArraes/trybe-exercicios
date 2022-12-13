@@ -134,17 +134,14 @@ changeClasseColor();
 
 const changeColorNumber = () => {
   const changeClass = document.getElementsByClassName('task selected');
-  const changeClass2 = document.querySelector('.task');
   const days = document.getElementById('days');
-  let backGround = changeClass2.style.backGround;
+  let background = changeClass[0].style.backgroundColor;
 
   days.addEventListener('click', (event) => {
-    let eventTarget = event.target.style.color;
-
-    if (changeClass.length > 0 && eventTarget !== backGround) {
-      let color = changeClass[0].style.backgroundColor;
-      event.target.style.color = color;
-    } else if (eventTarget === backGround) {
+    let eventTarget = event.target;
+    if (changeClass.length && eventTarget !== background) {
+      event.target.style.color = background;
+    } else if (eventTarget === background) {
       event.target.style.color = 'rgb(119,119,119)';
     }
   });
