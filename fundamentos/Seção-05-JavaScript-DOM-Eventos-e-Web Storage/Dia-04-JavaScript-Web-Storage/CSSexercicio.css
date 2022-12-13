@@ -1,0 +1,17 @@
+button {
+  width: 150px;
+  height: 30px;
+}
+
+#div-father {
+  text-align: center;
+  border: 1px solid black;
+}
+
+#text {
+  margin-bottom: 30px;
+  width: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
