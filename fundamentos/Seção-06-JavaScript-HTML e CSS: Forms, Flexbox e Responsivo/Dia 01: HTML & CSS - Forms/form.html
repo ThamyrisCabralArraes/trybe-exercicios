@@ -130,6 +130,7 @@
       <button
         type="submit"
         id="btn-submit"
+        disabled
       >
         Enviar
       </button>
@@ -146,36 +147,36 @@
       const btnSubmit = document.querySelector('#btn-submit');
       const btnReset = document.querySelector('#btn-reset');
       const texto = document.querySelector('#texto');
-      const name = document.querySelector('#name').value;
-      const email = document.querySelector('#email').value;
-      const textArea = document.querySelector('#text-area').value;
+      const name = document.querySelector('#name');
+      const email = document.querySelector('#email');
+      const textArea = document.querySelector('#text-area');
       const checkbox2 = document.querySelector('#ckeckbox2');
 
       const characterName = () => {
-        const nameLength = name.Length < 10 || name.Length > 10;
-        const textAreaLength = textArea.Length < 10 || textArea.Length > 40;
-        const emailLength = email.Length > 500;
-
-        if (nameLength || textAreaLength || emailLength) {
-          return false;
-        } else {
+        const nameLength = name.value.length >= 10 && name.value.length <= 50;
+        console.log(name.value.length, nameLength);
+        const textAreaLength = textArea.value.length > 10 && textArea.value.length < 40;
+        const emailLength = email.value.length < 500;
+        if ((nameLength && emailLength) || textAreaLength) {
           return true;
+        } else {
+          return false;
         }
       };
 
       const characterLength = (e) => {
         e.preventDefault();
         const validacao = characterName();
-        if (validacao === false) {
-          texto.textContent = 'Dados inválidos';
-        } else {
+        if (validacao) {
           texto.textContent =
             'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.';
+        } else {
+          texto.textContent = 'Dados inválidos';
         }
       };
 
       const checkbox = () => {
-        btnSubmit.disable = !checkbox2.checked;
+        btnSubmit.disabled = !checkbox2.checked;
       };
 
       btnSubmit.addEventListener('click', characterLength);
