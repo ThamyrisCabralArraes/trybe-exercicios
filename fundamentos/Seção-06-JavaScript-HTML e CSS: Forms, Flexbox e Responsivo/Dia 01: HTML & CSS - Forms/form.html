@@ -13,7 +13,7 @@
     <style>
       #Forms {
         border: 1px solid gray;
-        width: 500px;
+        width: 700px;
         padding: 10px;
       }
 
@@ -50,12 +50,14 @@
         <br />
         <br />
         <label for="opcao1">
+          Destino preferido:
+          <br />
           <input
             type="radio"
             name="submit"
             id="opcao1"
           />
-          opção 1
+          Cidade
         </label>
         <label for="opcao2">
           <input
@@ -63,7 +65,7 @@
             name="submit"
             id="opcao2"
           />
-          opção 2
+          Campo
         </label>
         <label for="opcao3">
           <input
@@ -79,11 +81,24 @@
             name="submit"
             id="opcao4"
           />
-          opção 4
+          Praia
         </label>
         <br />
         <br />
+        <label for="">
+          <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+          <textarea
+            name=""
+            id="text-area"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </label>
+        <br />
+        <br />
+
         <label for="data">
+          <p>Qual a melhor data para realizar sua viagem?</p>
           Data:
           <input
             type="date"
@@ -95,18 +110,20 @@
         <br />
         <br />
         <label for="">
-          Concordo 1
+          Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
           <input
             type="checkbox"
             name=""
             id=""
           />
           <br />
-          Concordo 2
+          <br />
+          Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+          futuros.
           <input
             type="checkbox"
             name=""
-            id=""
+            id="ckeckbox2"
           />
         </label>
       </div>
@@ -124,16 +141,47 @@
       </button>
     </form>
     <p id="texto"></p>
+
     <script>
       const btnSubmit = document.querySelector('#btn-submit');
       const btnReset = document.querySelector('#btn-reset');
       const texto = document.querySelector('#texto');
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const textArea = document.querySelector('#text-area').value;
+      const checkbox2 = document.querySelector('#ckeckbox2');
 
-      changeText = (e) => {
-        // e.preventDefault();
-        texto.textContent = 'Aplicação submetida com sucesso.';
+      const characterName = () => {
+        const nameLength = name.Length < 10 || name.Length > 10;
+        const textAreaLength = textArea.Length < 10 || textArea.Length > 40;
+        const emailLength = email.Length > 500;
+
+        if (nameLength || textAreaLength || emailLength) {
+          return false;
+        } else {
+          return true;
+        }
       };
-      btnSubmit.addEventListener('click', changeText);
+
+      const characterLength = (e) => {
+        e.preventDefault();
+        const validacao = characterName();
+        if (validacao === false) {
+          texto.textContent = 'Dados inválidos';
+        } else {
+          texto.textContent =
+            'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.';
+        }
+      };
+
+      const checkbox = () => {
+        btnSubmit.disable = !checkbox2.checked;
+      };
+
+      btnSubmit.addEventListener('click', characterLength);
+      checkbox2.addEventListener('change', checkbox);
+
+      window.onload = () => {};
     </script>
   </body>
 </html>
