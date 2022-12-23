@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <style>
+      #Forms {
+        border: 1px solid gray;
+        width: 500px;
+        padding: 10px;
+      }
+
+      button {
+        margin: 10px;
+      }
+    </style>
+    <title>TrybeTrip</title>
+  </head>
+  <body>
+    <h1>TrybeTrip</h1>
+    <form action="GET">
+      <div id="Forms">
+        <label for="name">
+          Nome:
+          <input
+            type="text"
+            id="name"
+            placeholder="Digite seu nome"
+            required
+          />
+        </label>
+        <br />
+        <br />
+        <label for="email">
+          Email:
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+        </label>
+        <br />
+        <br />
+        <label for="opcao1">
+          <input
+            type="radio"
+            name="submit"
+            id="opcao1"
+          />
+          opção 1
+        </label>
+        <label for="opcao2">
+          <input
+            type="radio"
+            name="submit"
+            id="opcao2"
+          />
+          opção 2
+        </label>
+        <label for="opcao3">
+          <input
+            type="radio"
+            name="submit"
+            id="opcao3"
+          />
+          opção 3
+        </label>
+        <label for="opcao4">
+          <input
+            type="radio"
+            name="submit"
+            id="opcao4"
+          />
+          opção 4
+        </label>
+        <br />
+        <br />
+        <label for="data">
+          Data:
+          <input
+            type="date"
+            placeholder="dd/mm/aa"
+            id="data"
+            required
+          />
+        </label>
+        <br />
+        <br />
+        <label for="">
+          Concordo 1
+          <input
+            type="checkbox"
+            name=""
+            id=""
+          />
+          <br />
+          Concordo 2
+          <input
+            type="checkbox"
+            name=""
+            id=""
+          />
+        </label>
+      </div>
+      <button
+        type="submit"
+        id="btn-submit"
+      >
+        Enviar
+      </button>
+      <button
+        type="reset"
+        id="btn-reset"
+      >
+        Apagar
+      </button>
+    </form>
+    <p id="texto"></p>
+    <script>
+      const btnSubmit = document.querySelector('#btn-submit');
+      const btnReset = document.querySelector('#btn-reset');
+      const texto = document.querySelector('#texto');
+
+      changeText = (e) => {
+        // e.preventDefault();
+        texto.textContent = 'Aplicação submetida com sucesso.';
+      };
+      btnSubmit.addEventListener('click', changeText);
+    </script>
+  </body>
+</html>
