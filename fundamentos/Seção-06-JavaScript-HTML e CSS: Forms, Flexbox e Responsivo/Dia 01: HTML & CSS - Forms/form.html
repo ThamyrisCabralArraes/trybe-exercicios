@@ -10,138 +10,187 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <style>
-      #Forms {
-        border: 1px solid gray;
-        width: 700px;
-        padding: 10px;
-      }
-
-      button {
-        margin: 10px;
-      }
-    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
     <title>TrybeTrip</title>
   </head>
   <body>
-    <h1>TrybeTrip</h1>
-    <form action="GET">
-      <div id="Forms">
-        <label for="name">
-          Nome:
-          <input
-            type="text"
-            id="name"
-            placeholder="Digite seu nome"
-            required
-          />
-        </label>
-        <br />
-        <br />
-        <label for="email">
-          Email:
-          <input
-            type="email"
-            id="email"
-            placeholder="Digite seu e-mail"
-            required
-          />
-        </label>
-        <br />
-        <br />
-        <label for="opcao1">
-          Destino preferido:
-          <br />
-          <input
-            type="radio"
-            name="submit"
-            id="opcao1"
-          />
-          Cidade
-        </label>
-        <label for="opcao2">
-          <input
-            type="radio"
-            name="submit"
-            id="opcao2"
-          />
-          Campo
-        </label>
-        <label for="opcao3">
-          <input
-            type="radio"
-            name="submit"
-            id="opcao3"
-          />
-          opção 3
-        </label>
-        <label for="opcao4">
-          <input
-            type="radio"
-            name="submit"
-            id="opcao4"
-          />
-          Praia
-        </label>
-        <br />
-        <br />
-        <label for="">
-          <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-          <textarea
-            name=""
-            id="text-area"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </label>
-        <br />
-        <br />
+    <main class="m-2">
+      <h1>TrybeTrip</h1>
+      <form action="GET">
+        <fieldset>
+          <div
+            class="form-group"
+            id="Forms"
+          >
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text"
+                id="basic-addon1"
+                >Nome:</span
+              >
+              <input
+                type="text"
+                class="form-control meu-input"
+                id="name"
+                placeholder="Digite seu nome"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                required
+              />
+            </div>
 
-        <label for="data">
-          <p>Qual a melhor data para realizar sua viagem?</p>
-          Data:
-          <input
-            type="date"
-            placeholder="dd/mm/aa"
-            id="data"
-            required
-          />
-        </label>
-        <br />
-        <br />
-        <label for="">
-          Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
-          <input
-            type="checkbox"
-            name=""
-            id=""
-          />
-          <br />
-          <br />
-          Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
-          futuros.
-          <input
-            type="checkbox"
-            name=""
-            id="ckeckbox2"
-          />
-        </label>
-      </div>
-      <button
-        type="submit"
-        id="btn-submit"
-        disabled
-      >
-        Enviar
-      </button>
-      <button
-        type="reset"
-        id="btn-reset"
-      >
-        Apagar
-      </button>
-    </form>
-    <p id="texto"></p>
+            <div
+            class="form-group"
+            id="Forms"
+          >
+            <div class="input-group mb-3">
+              <span
+                class="input-group-text"
+                id="basic-addon1"
+                >Email:</span
+              >
+              <input
+                type="email"
+                class="form-control meu-input"
+                id="name"
+                placeholder="Digite seu Email"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                required
+              />
+            </div>
+            <label
+              class="label"
+              for="opcao1"
+            >
+              Destino preferido:
+              <br />
+              <input
+                type="radio"
+                name="submit"
+                id="opcao1"
+              />
+              Cidade
+            </label>
+            <label
+              class="label"
+              for="opcao2"
+            >
+              <input
+                type="radio"
+                name="submit"
+                id="opcao2"
+              />
+              Campo
+            </label>
+            <label
+              class="label"
+              for="opcao3"
+            >
+              <input
+                type="radio"
+                name="submit"
+                id="opcao3"
+              />
+              opção 3
+            </label>
+            <label
+              class="label"
+              for="opcao4"
+            >
+              <input
+                type="radio"
+                name="submit"
+                id="opcao4"
+              />
+              Praia
+            </label>
+            <br />
+            <br />
+            <label
+              class="label"
+              for=""
+            >
+              <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+              <textarea
+                name=""
+                id="text-area"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </label>
+            <br />
+            <br />
+            <label
+              class="label"
+              for="data"
+            >
+              <p>Qual a melhor data para realizar sua viagem?</p>
+              Data:
+              <input
+                type="date"
+                placeholder="dd/mm/aa"
+                id="data"
+                required
+              />
+            </label>
+            <br />
+            <br />
+            <label
+              class="label"
+              for=""
+            >
+              Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="form-check"
+              />
+              <br />
+              <br />
+              Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+              futuros.
+              <input
+                type="checkbox"
+                name=""
+                id="ckeckbox2"
+                class="form-check"
+              />
+            </label>
+          </div>
+          <button
+            type="submit"
+            id="btn-submit"
+            class="btn"
+            disabled
+          >
+            Enviar
+          </button>
+          <button
+            type="reset"
+            id="btn-reset"
+          >
+            Apagar
+          </button>
+        </fieldset>
+      </form>
+      <p id="texto"></p>
+    </main>
 
     <script>
       const btnSubmit = document.querySelector('#btn-submit');
