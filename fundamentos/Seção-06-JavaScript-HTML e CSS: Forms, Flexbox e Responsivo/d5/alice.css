@@ -1,0 +1,179 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+li {
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 15px;
+  }
+
+  header {
+    background-color: darksalmon;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  header ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+
+  .aside-one h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  .aside-two h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  li {
+    font-size: 19px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .main-content h1 {
+    text-align: center;
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+
+  .main-content p {
+    font-size: 22px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h3 {
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  body {
+    margin: 15px;
+  }
+  header {
+    background-color: darksalmon;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  header ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+  }
+
+  .aside-one h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  .aside-two h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  li {
+    font-size: 22px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .main-content h1 {
+    text-align: center;
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+
+  .main-content p {
+    font-size: 26px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h3 {
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 15px;
+  }
+  header {
+    background-color: darksalmon;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  header ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .aside-one h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  .aside-two h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+
+  li {
+    font-size: 22px;
+  }
+
+  .main-content h1 {
+    text-align: center;
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+
+  .main-content p {
+    font-size: 26px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h3 {
+    background-color: rgba(130, 190, 190, 0.418);
+  }
+}
