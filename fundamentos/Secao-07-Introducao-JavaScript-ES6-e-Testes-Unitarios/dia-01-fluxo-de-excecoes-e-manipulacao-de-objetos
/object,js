@@ -1,0 +1,267 @@
+const customer1 = {
+  firstName: 'Roberto',
+  age: 22,
+  job: 'Teacher',
+};
+
+console.log(customer1);
+customer1.lastName = 'Faria';
+console.log(customer1);
+
+const customer2 = {
+  firstName: 'Maria',
+  age: 23,
+  job: 'Medic',
+};
+
+console.log(customer2);
+customer2['lastName'] = 'Silva';
+console.log(customer2);
+
+// const customer = {
+//   firstName: 'Roberto',
+//   age: 22,
+//   job: 'Teacher',
+// };
+
+// // cria a variável que salva o nome da chave
+// let newKey = 'lastName';
+
+// // cria a variável que salva o valor da chave
+// const lastName = 'Ferreira';
+
+// // cria a nova chave com o valor da variável lastName
+// customer[newKey] = lastName;
+
+//
+
+const customer = {
+  firstName: 'Roberto',
+  age: 22,
+  job: 'Teacher',
+};
+
+let newKeyy = 'lastName';
+const lastName = 'Ferreira';
+
+const adicionaPropriedade = (objeto, novaPropriedade, valor) => {
+  objeto[novaPropriedade] = valor;
+};
+
+adicionaPropriedade(customer, newKeyy, lastName);
+console.log(customer);
+
+const customer3 = {
+  firstName: 'Thamyris',
+  age: 22,
+  job: 'Desenvolvedora',
+};
+
+let newKey = 'lastName';
+const value = 'Cabral';
+
+const addObj = (objeto, novaPropriedade, valor) => {
+  objeto[novaPropriedade] = valor;
+};
+
+addObj(customer3, newKey, value);
+
+newKey = 'fullName';
+const firstLastName = `${customer3.firstName} ${customer3.lastName}`;
+
+addObj(customer3, newKey, firstLastName);
+console.log(customer3);
+
+//
+
+const pessoaEstudante = {};
+
+const addKey = (objet, propriedade, valor) => {
+  objet[propriedade] = valor;
+};
+
+let key = 'name';
+const namee = 'Thamyris';
+
+addKey(pessoaEstudante, key, namee);
+
+key = 'age';
+const age = 34;
+
+addKey(pessoaEstudante, key, age);
+
+key = 'email';
+const email = 'thamyriscabral@hotmail.com';
+
+addKey(pessoaEstudante, key, email);
+
+key = 'gitHub';
+const git = 'ThamyrisCabralArraes';
+
+addKey(pessoaEstudante, key, git);
+
+console.log(pessoaEstudante);
+
+//
+
+const coolestTvShow = {
+  name: 'BoJack Horseman',
+  genre: 'adult animation',
+  createdBy: 'Raphael Bob-Waksberg',
+  favoriteCharacter: 'Princess Carolyn',
+  quote: 'Princess Carolyn always lands on her feet.',
+  seasons: 6,
+};
+
+// for (const property in coolestTvShow) {
+//   console.log(property);
+// }
+
+console.log(Object.keys(coolestTvShow));
+
+// [ 'name', 'genre', 'createdBy', 'favoriteCharacter', 'quote', 'seasons' ]
+
+//
+
+const student1 = {
+  html: 'Muito Bom',
+  css: 'Bom',
+  javascript: 'Ótimo',
+  softskills: 'Ótimo',
+};
+
+const student2 = {
+  html: 'Bom',
+  css: 'Ótimo',
+  javascript: 'Ruim',
+  softskills: 'Ótimo',
+  git: 'Bom', // chave adicionada
+};
+
+const nivel = (student) => {
+  const estudantes = Object.keys(student);
+
+  for (let index in estudantes) {
+    console.log(`${estudantes[index]} Nivel: ${student[estudantes[index]]}`);
+  }
+};
+
+console.log('estudante 1');
+nivel(student1);
+console.log('estudante 2');
+nivel(student2);
+
+//
+const student = {
+  html: 'Muito Bom',
+  css: 'Bom',
+  javascript: 'Ótimo',
+  softskill: 'Ótimo',
+};
+
+// const listSkillsValuesWithFor = (student) => {
+//   const skills = [];
+//   for (skill in student) {
+//     skills.push(student[skill]);
+//   }
+
+//   return skills;
+// };
+
+const listSkillsValuesWithValues = (student) => {
+  return Object.values(student);
+};
+
+// Sem Object.values
+// console.log(listSkillsValuesWithFor(student));
+
+// Com Object.values
+console.log(listSkillsValuesWithValues(student));
+
+//
+
+const coutries = {
+  franca: 'Paris',
+  brasil: 'Brasília',
+  espanha: 'Madrid',
+  portugal: 'Lisboa',
+};
+const pairKeyValue = Object.entries(coutries);
+console.log(pairKeyValue);
+
+for (index in pairKeyValue) {
+  console.log('--------');
+  console.log('País:', pairKeyValue[index][0]);
+  console.log('Capital:', pairKeyValue[index][1]);
+}
+//
+
+const person = {
+  name: 'Alberto',
+  lastName: 'Gomes',
+  age: 20,
+};
+
+const info = {
+  age: 23,
+  job: 'engenheiro',
+};
+
+const family = {
+  children: ['Maria', 'João'],
+  wife: 'Ana',
+};
+
+Object.assign(person, info, family)
+console.log(person)
+
+/* Output
+  { name: 'Alberto',
+  lastName: 'Gomes',
+  age: 23,
+  job: 'engenheiro',
+  children: [ 'Maria', 'João' ],
+  wife: 'Ana'
+  } */
+
+  const person = {
+  name: 'Roberto',
+};
+
+const lastName = {
+  lastName: 'Silva',
+};
+
+const clone = Object.assign(person, lastName);
+
+console.log(clone); // { name: 'Roberto', lastName: 'Silva' }
+console.log(person); // { name: 'Roberto', lastName: 'Silva' }
+
+clone.name = 'Maria';
+
+console.log('Mudando a propriedade name através do objeto clone')
+console.log(clone); // Output: { name: 'Maria', lastName: 'Silva' }
+console.log(person); // Output: { name: 'Maria', lastName: 'Silva' }
+console.log('--------------');
+
+person.lastName = 'Ferreira';
+
+console.log('Mudando a propriedade lastName através do objeto person');
+console.log(clone); // Output: { name: 'Maria', lastName: 'Ferreira' }
+console.log(person); // Output: { name: 'Maria', lastName: 'Ferreira' }
+
+const obj = { value1: 10, value2: 11 };
+const cloneObj = obj;
+
+const person = {
+  name:'Roberto',
+};
+
+const lastName = {
+  lastName: 'Silva',
+};
+
+const newPerson = Object.assign({},person,lastName);
+newPerson.name = 'Gilberto';
+console.log(newPerson);
+console.log(person);
