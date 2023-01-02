@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672667156890" clover="3.2.0">
+  <project timestamp="1672667156890" name="All files">
+    <metrics statements="68" coveredstatements="21" conditionals="26" coveredconditionals="0" methods="11" coveredmethods="1" elements="105" coveredelements="22" complexity="0" loc="68" ncloc="68" packages="1" files="7" classes="7"/>
+    <file name="exercicio.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio.js">
+      <metrics statements="6" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio2.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio2.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio3.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio3.js">
+      <metrics statements="6" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="3" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio4.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio4.js">
+      <metrics statements="17" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio5.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio5.js">
+      <metrics statements="11" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio6.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/exercicio6.js">
+      <metrics statements="12" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+    <file name="loginValidation.js" path="/home/thamyris/Documentos/trybe/trybe-exercicios/fundamentos/Secao-07-Introducao-JavaScript-ES6-e-Testes-Unitarios/dia-02-primeiros-passos-em-jest/my_new_project/loginValidation.js">
+      <metrics statements="11" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
