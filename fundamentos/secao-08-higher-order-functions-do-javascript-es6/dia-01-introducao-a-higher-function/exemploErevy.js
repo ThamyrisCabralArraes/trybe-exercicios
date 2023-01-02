@@ -22,3 +22,13 @@ const verifyAges = (arr, number) => {
 
 console.log(verifyAges(people, 18));
 console.log(verifyAges(people, 14));
+
+//
+const pessoas2 = [
+  { nome: 'Joana', idade: 37 },
+  { nome: 'Ana', idade: 25 },
+  { nome: 'João', idade: 32 },
+  { nome: 'Aline', idade: 28 },
+];
+
+console.log(pessoas2.every((pessoa) => pessoa > 30));

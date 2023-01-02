@@ -31,3 +31,14 @@ const hasName = (arr, name) => {
 
 console.log(hasName(names, 'Ana'));
 console.log(hasName(names, 'Pedro'));
+
+//
+
+const pessoas2 = [
+  { nome: 'Joana', idade: 37 },
+  { nome: 'Ana', idade: 25 },
+  { nome: 'João', idade: 32 },
+  { nome: 'Aline', idade: 28 },
+];
+
+console.log(pessoas2.some((pessoa) => pessoa.idade > 30));

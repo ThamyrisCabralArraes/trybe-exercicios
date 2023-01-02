@@ -17,3 +17,12 @@ const multiply = (element) => {
 };
 
 numbers.forEach(multiply);
+
+const pessoas = [
+  { nome: 'Joana', idade: 37 },
+  { nome: 'Ana', idade: 25 },
+  { nome: 'João', idade: 32 },
+  { nome: 'Aline', idade: 28 },
+];
+
+pessoas.forEach((pessoa) => console.log(`O nome da pessoa é ${pessoa.nome}`));

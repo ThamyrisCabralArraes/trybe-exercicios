@@ -29,3 +29,12 @@ const numbers2 = [19, 21, 30, 3, 45, 22, 15];
 const result = numbers2.find((item) => item % 3 === 0 && item % 5 === 0);
 
 console.log(result);
+
+const pessoas = [
+  { nome: 'Joana', idade: 37 },
+  { nome: 'Ana', idade: 25 },
+  { nome: 'João', idade: 32 },
+  { nome: 'Aline', idade: 28 },
+];
+
+console.log(pessoas.find((pessoa) => pessoa.nome === 'Aline'));
