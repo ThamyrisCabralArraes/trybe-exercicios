@@ -6,11 +6,15 @@ const numbers = [19, 21, 30, 3, 45, 22, 15];
 
 console.log(numbers.find((item) => item > 19));
 
+//
+
 const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
 names.find((item) => {
   if (item.length === 5) console.log(item);
 });
+
+//
 
 const musicas = [
   { id: '31031685', title: 'Partita in C moll BWV 997' },
@@ -23,6 +27,8 @@ musicas.find((item) => {
     console.log(item);
   }
 });
+
+//
 
 const numbers2 = [19, 21, 30, 3, 45, 22, 15];
 
