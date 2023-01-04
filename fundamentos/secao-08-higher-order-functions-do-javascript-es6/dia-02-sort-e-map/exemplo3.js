@@ -73,12 +73,36 @@ const estudantes = [
   },
 ];
 
-estudantes.forEach((estudante) =>
-  estudante.turno === 'Manhã' ? console.log(`${estudante.nome} ${estudante.sobrenome}`) : false,
-);
+const findStudent = (name, students) => {
+  for (let index = 0; index < students.length; index += 1) {
+    if (students[index].nome === name) {
+      return students[index];
+    }
+  }
+};
 
-const allNameStudents = estudantes
-  .filter((estudante) => estudante.turno === 'Manhã')
-  .map((estudante) => `${estudante.nome} ${estudante.sobrenome}`);
+const reportStatus = (name, students) => {
+  const getStudent = findStudent(name, students);
+  const report = [];
+  for (let index = 0; index < getStudent.materias.length; index += 1) {
+    if (getStudent.materias[index].nota >= 60) {
+      report.push(`${getStudent.materias[index].name} Aprovado`);
+    } else {
+      report.push(`${getStudent.materias[index].name} Reprovado`);
+    }
+  }
+  return report;
+};
 
-console.log(allNameStudents);
+console.log(reportStatus('Natalia', estudantes));
+
+//
+
+const reportStatus2 = (name, students) => {
+  const studentInfo = students.find((student) => student.nome === name);
+  return studentInfo.materias.map(
+    (materia) => `${materia.name} ${materia.nota >= 60 ? 'Aprovado' : 'Reprovado'}`,
+  );
+};
+
+console.log(reportStatus2('Natalia', estudantes));
