@@ -77,12 +77,10 @@ const formatedAuthorNamesBirth = () => {
 formatedAuthorNamesBirth();
 
 const nameAndAge = () => {
-  const expectedResult = books.map((book) => {
-    const objeto = {};
-    objeto.author = book.author.name;
-    objeto.age = book.releaseYear - book.author.birthYear;
-    return objeto;
-  });
+  const expectedResult = books.map((book) => ({
+    author: book.author.name,
+    age: book.releaseYear - book.author.birthYear,
+  }));
   return expectedResult.sort((a, b) => a.age - b.age);
 };
 console.log(nameAndAge());
