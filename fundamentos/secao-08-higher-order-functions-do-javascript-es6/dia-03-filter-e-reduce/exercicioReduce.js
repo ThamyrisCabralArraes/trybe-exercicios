@@ -82,11 +82,9 @@ console.log(getPopulation());
 console.log('2........');
 
 const getTotalArea = () => {
-  const expectedResult = countries
-    .map((item) => item.area)
-    .reduce((acc, curr) => {
-      return acc + curr;
-    }, 0);
+  const expectedResult = countries.reduce((acc, curr) => {
+    return acc + curr.area;
+  }, 0);
   return expectedResult;
 };
 
