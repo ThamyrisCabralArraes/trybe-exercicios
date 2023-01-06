@@ -1,16 +1,3 @@
-// Faça uma lista com as suas frutas favoritas
-const specialFruit = ['abacaxi', 'goiaba', 'melancia'];
-
-// Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['hamburguer', 'pizza', 'bolo'];
-
-const fruitSalad = (fruit, additional) => {
-  const allTogether = [...fruit, ...additional];
-  return allTogether;
-};
-
-console.log(fruitSalad(specialFruit, additionalItens));
-
 console.log('...');
 
 const countParams = (...args) => {

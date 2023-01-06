@@ -47,3 +47,16 @@ const randomNumbers = [57, 8, 5, 800, 152, 74, 630, 98, 40];
 console.log(Math.max(...randomNumbers)); // 800
 
 console.log('...');
+
+// Faça uma lista com as suas frutas favoritas
+const specialFruit = ['abacaxi', 'goiaba', 'melancia'];
+
+// Faça uma lista de complementos que você gostaria de adicionar
+const additionalItens = ['hamburguer', 'pizza', 'bolo'];
+
+const fruitSalad = (fruit, additional) => {
+  const allTogether = [...fruit, ...additional];
+  return allTogether;
+};
+
+console.log(fruitSalad(specialFruit, additionalItens));
