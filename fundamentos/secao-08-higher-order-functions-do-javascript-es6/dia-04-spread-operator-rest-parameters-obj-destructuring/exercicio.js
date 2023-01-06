@@ -37,10 +37,8 @@ const gunnar = {
   nationality: 'Icelandic',
 };
 
-const personLikes = (parameter) => {
-  const { name, age, likes } = parameter;
-  return `${name} is ${age} years old and likes ${likes.join(', ')}.`;
-};
+const personLikes = ({ name, age, likes }) =>
+  `${name} is ${age} years old and likes ${likes.join(', ')}.`;
 
 // Retornos esperados:
 console.log(personLikes(alex)); // 'Alex is 26 years old and likes fly fishing.'
@@ -77,12 +75,12 @@ const people = [
   // bornIn: nascido em
 ];
 
-const filterPeople = () => {
-  return people.filter(
-    (item) => item.nationality === 'Australian' && item.bornIn >= 1901 && item.bornIn <= 2000,
+const filterPeople = (arr) => {
+  return arr.filter(
+    ({ nationality, bornIn }) => nationality === 'Australian' && bornIn >= 1901 && bornIn <= 2000,
   );
 };
-console.log(filterPeople());
+console.log(filterPeople(people));
 
 console.log('exercicio5');
 
@@ -126,6 +124,6 @@ const yearSeasons = {
 
 const { spring, summer, autumn, winter } = yearSeasons;
 
-const mounths = [...spring, ...summer, ...autumn, ...winter];
+const mounthsOfTheYear = [...spring, ...summer, ...autumn, ...winter];
 
-console.log(mounths);
+console.log(mounthsOfTheYear);
