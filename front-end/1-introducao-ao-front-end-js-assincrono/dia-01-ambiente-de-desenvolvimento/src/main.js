@@ -16,8 +16,3 @@ h2.addEventListener('click', (e) => {
   copy(e.target.innerHTML);
   alert('texto copiado');
 });
-
-// import { nanoid } from 'nanoid';
-
-// const randomPassword = nanoid();
-// console.log(randomPassword);
