@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "thamyris",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nanoid": "^4.0.1"
+  },
+  "type": "module"
 }
