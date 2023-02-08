@@ -4,7 +4,8 @@
   "description": "melhor gerador de senhas",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --open"
+    "dev": "vite --open",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "thamyris",

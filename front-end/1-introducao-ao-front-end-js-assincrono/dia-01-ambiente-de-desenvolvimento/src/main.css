@@ -1,0 +1,32 @@
+body {
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(125, 17, 17);
+  color: white;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: brown;
+}
+
+h2 {
+  border: 1px solid brown;
+  border-radius: 10px;
+  padding: 5px;
+}

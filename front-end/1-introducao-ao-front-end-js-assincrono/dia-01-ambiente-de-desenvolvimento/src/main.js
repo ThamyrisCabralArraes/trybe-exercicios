@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import './main.css';
 
 const btn = document.querySelector('button');
 const h2 = document.querySelector('h2');
