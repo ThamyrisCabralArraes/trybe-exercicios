@@ -14,3 +14,13 @@ const erro = (erro) => {
   p.textContent = 'Não achamos voce ainda. Clique Novamente';
   imagemHeroi.appendChild(p);
 };
+botaoRandom.addEventListener('click', () => {
+  const random = randomNumber(500);
+  console.log(random);
+  fetch(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${random}.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      escolherImagemHeroi(data.images.md);
+    })
+    .catch((error) => erro(error.message));
+});
