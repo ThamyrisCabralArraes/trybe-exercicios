@@ -51,4 +51,11 @@ const randomNumberPar = () =>
 
 randomNumberPar()
   .then((response) => console.log(`${response} é par`))
-  .catch((error) => console.log(`${error.message}`));
+  .catch((error) => console.log(`${error.message}`))
+  .finally(() => console.log('Acabou a funçao randomNumberPar.'));
+
+console.log('exemplo de fetch');
+
+fetch('https://dummyjson.com/products/27')
+  .then((response) => console.log(response.json()))
+  .catch((error) => console.log('Olha o erro:', error.message));
