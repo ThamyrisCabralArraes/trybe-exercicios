@@ -24,3 +24,9 @@ botaoRandom.addEventListener('click', () => {
     })
     .catch((error) => erro(error.message));
 });
+export function escolherImagemHeroi(imageId) {
+  imagemHeroi.innerHTML = '';
+  const img = document.createElement('img');
+  img.src = imageId;
+  imagemHeroi.appendChild(img);
+}
