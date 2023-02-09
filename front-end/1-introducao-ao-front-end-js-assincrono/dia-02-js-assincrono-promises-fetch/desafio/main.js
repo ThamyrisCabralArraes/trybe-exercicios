@@ -19,8 +19,23 @@ fetch(USERS_API)
     fillUsersSelect(users);
   });
 
-usersSelect.addEventListener('change', () => {
+usersSelect.addEventListener('change', (e) => {
   clearPageData();
+  fetch(`https://dummyjson.com/posts/user/${e.target.value}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      const { posts } = data;
+      fillPosts(posts);
 
-  // faça a lógica para pegar as informações dos posts da pessoa selecionada e dos comentários do post destacado aqui.
+      fetch(`https://dummyjson.com/posts/${posts[0].id}/comments`)
+        .then((response) => response.json())
+        .then((data) => {
+          const { comments } = data;
+
+          fillFeaturedPostComments(comments);
+        })
+        .catch((error) => fillErrorMessage(error.message));
+    })
+    .catch((error) => fillErrorMessage(error.message));
 });
