@@ -1,21 +1,10 @@
-import Swal from 'sweetalert2';
-
 const p = document.getElementById('p');
 const button = document.getElementById('button');
 const input = document.getElementById('input');
 
 const cep = '51020-250';
 
-const erro = () => {
-  Swal.fire({
-    title: 'Error!',
-    text: 'Do you want to continue',
-    icon: 'error',
-    confirmButtonText: 'Cool',
-  });
-};
-
-const funcaoDePesquisaCep = async () => {
+const handleClick = async () => {
   if (!input.value) {
     funcaoErro();
   }
@@ -33,4 +22,4 @@ const funcaoDePesquisaCep = async () => {
   }
 };
 
-button.addEventListener('click', funcaoDePesquisaCep);
+button.addEventListener('click', handleClick);
