@@ -56,13 +56,29 @@ class App extends Component {
         'https://cdn.pixabay.com/photo/2017/01/31/13/05/cameo-2023867_640.png',
     };
 
+    const users = [
+      {
+        name: 'Hello',
+        lastName: 'Word',
+      },
+      {
+        name: 'How you',
+        lastName: 'doooing?',
+      },
+    ];
+
     return (
       <div className='App'>
         <div
           className='Card'
           style={{ border: '10px solid #808080' }}
         >
-          <Hello />
+          {users.map((user) => (
+            <Hello
+              key={user.lastName}
+              user={user}
+            />
+          ))}
         </div>
         <div
           className='Card'
