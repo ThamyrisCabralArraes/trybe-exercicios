@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import { Component } from 'react';
+
+
+class App extends Component {
+  handleBotao1 = () => {
+    console.log('clicou botao 1')
+  }
+
+  handleBotao2 = () => {
+    console.log('clicou botao 2')
+  }
+
+  handleBotao3 = () => {
+    console.log('clicou botao 3')
+  }
+
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <button onClick={this.handleBotao1}>botao1</button>
+    <button onClick={this.handleBotao2}>botao2</button>
+    <button onClick={this.handleBotao3}>botao3</button>
     </div>
   );
+  }
 }
 
 export default App;
