@@ -1,6 +1,13 @@
 import { Component } from 'react';
 
 export default class Randomuser extends Component {
+  shouldComponentUpdate = (nextProps) => {
+    if (nextProps.dadosApi.length > 0 && nextProps.dadosApi[0].dob.age >= 50) {
+      return false;
+    }
+    return true;
+  };
+
   render() {
     const { dadosApi, loading } = this.props;
     return (

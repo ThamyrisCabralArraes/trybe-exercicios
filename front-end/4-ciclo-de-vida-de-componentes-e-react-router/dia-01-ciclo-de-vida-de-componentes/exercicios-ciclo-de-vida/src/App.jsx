@@ -25,12 +25,17 @@ class App extends Component {
     this.setState({ loading: true }, async () => {
       const response = await fetch(' https://api.randomuser.me/');
       const data = await response.json();
-      this.setState(
-        { dadosApi: data.results, loading: false },
-        console.log(data.results),
-      );
+      this.setState({ dadosApi: data.results, loading: false });
     });
   };
+
+  // shouldComponentUpdate = (_, nextState) => {
+  //   if (nextState.dadosApi.length > 0 && nextState.dadosApi[0].dob.age >= 50) {
+  //     return false;
+  //   }
+
+  //   return true;
+  // };
 
   componentDidMount = () => {
     this.fetchCharacters();
@@ -41,11 +46,11 @@ class App extends Component {
     const { characters, dadosApi, loading } = this.state;
     return (
       <div className='App'>
-        {/* <Counter />
+        <Counter />
         <RickeeMorty characters={characters} />
         <p>
           <DadJoker />
-        </p> */}
+        </p>
         <Randomuser
           dadosApi={dadosApi}
           loading={loading}
