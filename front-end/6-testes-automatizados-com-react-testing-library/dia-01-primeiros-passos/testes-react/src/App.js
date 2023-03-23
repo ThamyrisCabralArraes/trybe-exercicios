@@ -1,30 +1,55 @@
 // App.js
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import ValidEmail from './ValidEmail';
 
-function App() {
-  return (
-    <div className='App'>
-      <label htmlFor='id-email'>
-        Email
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      saveEmail: '',
+    };
+  }
+
+  changeEmail(value) {
+    this.setState({ email: value });
+  }
+
+  changeSaveEmail(value) {
+    this.setState({ saveEmail: value, email: '' });
+  }
+
+  render() {
+    const { email, saveEmail } = this.state;
+    return (
+      <div className='App'>
+        <label htmlFor='id-email'>
+          Email
+          <input
+            id='id-email'
+            value={email}
+            data-testid='id-email'
+            type='email'
+            onChange={(e) => this.changeEmail(e.target.value)}
+          />
+        </label>
         <input
-          id='id-email'
-          type='email'
+          id='btn-enviar'
+          type='button'
+          data-testid='id-send'
+          value='Enviar'
+          onClick={() => this.changeSaveEmail(email)}
         />
-      </label>
-      <input
-        id='btn-send'
-        type='button'
-        value='Enviar'
-        data-testid='id-send'
-      />
-      <input
-        id='btn-back'
-        type='button'
-        value='Voltar'
-      />
-    </div>
-  );
+        <input
+          id='btn-id'
+          type='button'
+          value='Voltar'
+        />
+        <ValidEmail email={saveEmail} />
+      </div>
+    );
+  }
 }
 
 export default App;
