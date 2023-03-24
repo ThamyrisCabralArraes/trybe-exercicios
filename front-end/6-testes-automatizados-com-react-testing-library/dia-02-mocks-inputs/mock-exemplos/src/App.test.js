@@ -81,6 +81,12 @@ it('a funcao fetch foi chamada 1x', async () => {
     status: 200,
   };
 
+  const joke2 = {
+    id: '7h3oGtrOfc',
+    joke: 'segunda frase',
+    status: 200,
+  };
+
   global.fetch = jest.fn(async () => ({
     json: async () => joke,
   }));
@@ -93,9 +99,16 @@ it('a funcao fetch foi chamada 1x', async () => {
   expect(frase).toBeInTheDocument();
   expect(button).toBeInTheDocument();
 
+  global.fetch = jest.fn(async () => ({
+    json: async () => joke2,
+  }));
+
   userEvent.click(button);
 
+  const frase2 = await screen.findByText('segunda frase');
+
   expect(frase).toBeInTheDocument();
-  expect(global.fetch).toHaveBeenCalledTimes(2);
+  expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(frase).toBeInTheDocument();
+  expect(frase2).toBeInTheDocument();
 });
