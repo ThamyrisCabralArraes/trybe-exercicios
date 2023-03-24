@@ -93,7 +93,7 @@ it('a funcao fetch foi chamada 1x', async () => {
 
   render(<App />);
   const frase = await screen.findByText('Whiteboards ... are remarkable.');
-  const button = screen.getByText('new joke');
+  const button = screen.getByRole('button', { name: 'new joke' });
 
   expect(global.fetch).toHaveBeenCalled();
   expect(frase).toBeInTheDocument();
