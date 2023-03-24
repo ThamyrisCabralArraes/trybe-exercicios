@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
 afterEach(() => jest.clearAllMocks());
@@ -71,4 +72,30 @@ it('fetches a joke', async () => {
   expect(global.fetch).toHaveBeenCalledWith('https://icanhazdadjoke.com/', {
     headers: { Accept: 'application/json' },
   });
+});
+
+it('a funcao fetch foi chamada 1x', async () => {
+  const joke = {
+    id: '7h3oGtrOfxc',
+    joke: 'Whiteboards ... are remarkable.',
+    status: 200,
+  };
+
+  global.fetch = jest.fn(async () => ({
+    json: async () => joke,
+  }));
+
+  render(<App />);
+  const frase = await screen.findByText('Whiteboards ... are remarkable.');
+  const button = screen.getByText('new joke');
+
+  expect(global.fetch).toHaveBeenCalled();
+  expect(frase).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
+
+  userEvent.click(button);
+
+  expect(frase).toBeInTheDocument();
+  expect(global.fetch).toHaveBeenCalledTimes(2);
+  expect(frase).toBeInTheDocument();
 });

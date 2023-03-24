@@ -7,6 +7,7 @@ class App extends React.Component {
     super();
     this.state = {
       joke: '',
+      prevewsJoke: [],
     };
 
     this.fetchJoke = this.fetchJoke.bind(this);
@@ -24,12 +25,29 @@ class App extends React.Component {
       .then((data) => this.setState({ joke: data.joke }));
   }
 
+  handleJoke = () => {
+    const { prevewsJoke } = this.state;
+
+    this.setState(
+      (prevState) => ({
+        prevewsJoke: [prevState.joke, ...prevewsJoke],
+      }),
+      this.fetchJoke(),
+    );
+  };
+
   render() {
-    const { joke } = this.state;
+    const { joke, prevewsJoke } = this.state;
 
     return (
       <div className='App'>
         <p>{joke}</p>
+
+        <button onClick={this.handleJoke}>new joke</button>
+
+        {prevewsJoke.map((joke) => (
+          <p>{joke}</p>
+        ))}
       </div>
     );
   }
