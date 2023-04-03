@@ -1,24 +1,26 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { legacy_createStore as createStore } from 'redux';
+import { composeWithDevTools } from '@redux-devtools/extension';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const INICIAL_STATE = { count: 0 };
 
-setupCounter(document.querySelector('#counter'))
+const reducer = (state = INICIAL_STATE, action) => {
+  if (action.type === 'INCREMENT_COUNTER') {
+    return { count: state.count + 1 };
+  }
+  return state;
+};
+
+const store = createStore(reducer, composeWithDevTools());
+
+const action = { type: 'INCREMENT_COUNTER' };
+
+const incrementarBtn = document.querySelector('#incrementar');
+incrementarBtn.addEventListener('click', () => {
+  store.dispatch(action);
+});
+
+store.subscribe(() => {
+  const count = document.querySelector('h2');
+  const globalState = store.getState();
+  count.innerHTML = globalState.count;
+});
