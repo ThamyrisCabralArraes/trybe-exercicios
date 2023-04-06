@@ -1,11 +1,12 @@
-
 import './App.css';
-import Aplicaçao from './components/Aplicaçao';
+import Aplicacao from './components/Aplicacao';
+import Caractesristicas from './components/Caractesristicas';
 
 function App() {
   return (
-    <div className="App">
-      <Aplicaçao />
+    <div className='App'>
+      <Aplicacao />
+      <Caractesristicas />
     </div>
   );
 }
