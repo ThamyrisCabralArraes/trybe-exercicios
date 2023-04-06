@@ -6,10 +6,12 @@ const requestSuccessful = (character) => ({
 });
 
 export const fetchCharacter = (personagem) => {
-  console.log(personagem);
-  return (dispatch) => {
-    fetch(`https://anapioficeandfire.com/api/characters?name=${personagem}`)
-      .then((response) => response.json())
-      .then((data) => dispatch(requestSuccessful(data)));
+  // console.log(personagem);
+  return async (dispatch) => {
+    const response = await fetch(
+      `https://anapioficeandfire.com/api/characters?name=${personagem}`,
+    );
+    const data = await response.json();
+    dispatch(requestSuccessful(data));
   };
 };

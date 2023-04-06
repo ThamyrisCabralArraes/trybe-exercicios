@@ -1,10 +1,14 @@
 import React from 'react';
 // import PropTypes from 'prop-types'
 
-export const caractesristicas = (props) => {
-  return <div>caractesristicas</div>;
+export const Caractesristicas = (props) => {
+  return (
+    <div>
+      <h1>Caracteristicas</h1>
+    </div>
+  );
 };
 
-caractesristicas.propTypes = {};
+Caractesristicas.propTypes = {};
 
-export default caractesristicas;
+export default Caractesristicas;
