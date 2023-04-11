@@ -16,7 +16,7 @@ class App extends React.Component {
           }}
           type='button'
         >
-          Novo Doguinho
+          Novo doguinho
         </button>
         {imageURL && (
           <img
