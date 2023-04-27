@@ -1,0 +1,27 @@
+.enabled {
+  color: black;
+  font-weight: bold;
+}
+
+.disabled {
+  color: rgba(128, 128, 128, 0.582);
+}
+
+.emails {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: black 0px 0px 5px;
+}
+
+button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: black 0px 0px 5px;
+}
