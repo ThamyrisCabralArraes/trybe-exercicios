@@ -1,26 +1,10 @@
-import { useState } from 'react';
+import useFormInput from './useFormInput';
 
 function Input() {
-  const [name, setName] = useState('');
-  const [idade, setIdade] = useState('');
-  const [cidade, setCidade] = useState('');
-  const [modulo, setModulo] = useState('');
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    if (name === 'name') {
-      setName(value);
-    }
-    if (name === 'idade') {
-      setIdade(value);
-    }
-    if (name === 'cidade') {
-      setCidade(value);
-    }
-    if (name === 'modulo') {
-      setModulo(value);
-    }
-  };
+  const name = useFormInput('');
+  const cidade = useFormInput('');
+  const modulo = useFormInput('');
+  const idade = useFormInput('');
 
   return (
     <div>
@@ -29,49 +13,49 @@ function Input() {
         name='name'
         type='text'
         placeholder='name'
-        value={name}
-        onChange={handleChange}
+        value={name.value}
+        onChange={name.onChange}
       />
       <input
         name='idade'
         type='number'
         placeholder='idade'
-        value={idade}
-        onChange={handleChange}
+        value={idade.value}
+        onChange={idade.onChange}
       />
       <input
         name='cidade'
         type='text'
         placeholder='cidade'
-        value={cidade}
-        onChange={handleChange}
+        value={cidade.value}
+        onChange={cidade.onChange}
       />
       <input
         type='radio'
-        name={modulo}
+        name={modulo.value}
         value='Fundamentos'
-        onChange={handleChange}
+        onChange={modulo.onChange}
       />{' '}
       Fundamentos
       <input
         type='radio'
-        name={modulo}
+        name={modulo.value}
         value='FrontEnd'
-        onChange={handleChange}
+        onChange={modulo.onChange}
       />{' '}
       FrontEnd
       <input
         type='radio'
-        name={modulo}
+        name={modulo.value}
         value='BackEnd'
-        onChange={handleChange}
+        onChange={modulo.onChange}
       />{' '}
       BackEnd
       <input
         type='radio'
-        name={modulo}
+        name={modulo.value}
         value='Ciência da Computação'
-        onChange={handleChange}
+        onChange={modulo.onChange}
       />{' '}
       Ciência da Computação
       <button></button>
