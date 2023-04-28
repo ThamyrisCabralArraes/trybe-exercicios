@@ -7,10 +7,15 @@ const useFormInput = (initialValue) => {
     setValue(e.target.value);
   };
 
-  return {
-    value,
-    onChange: handleChange,
+  const clear = () => {
+    setValue('');
   };
-}
+
+  return {
+    value: value,
+    onChange: handleChange,
+    clear,
+  };
+};
 
 export default useFormInput;
